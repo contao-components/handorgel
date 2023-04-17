@@ -1,0 +1,10 @@
+{
+    "devDependencies": {
+        "gulp": "^4.0.2",
+        "gulp-csso": "^4.0.1",
+        "gulp-ignore": "^3.0.0",
+        "gulp-rename": "^2.0",
+        "pump": "^3.0"
+    },
+    "private": true
+}

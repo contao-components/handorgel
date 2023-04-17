@@ -1,0 +1,15 @@
+{
+    "name": "contao-components/handorgel",
+    "description": "Handorgel integration for Contao Open Source CMS",
+    "license": "MIT",
+    "type": "contao-component",
+    "authors": [
+        {
+            "name": "Manuel Sommerhalder",
+            "homepage": "https://github.com/oncode"
+        }
+    ],
+    "require": {
+        "contao-components/installer": "^1.0.9"
+    }
+}
