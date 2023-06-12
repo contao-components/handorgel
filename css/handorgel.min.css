@@ -1,1 +1,1 @@
-.handorgel .accordion{display:none;overflow:hidden;height:0;transition:height .1s ease .1s}.handorgel .accordion.open{display:block;transition:height .2s ease}.handorgel .accordion.active{overflow:visible}
+.handorgel .accordion,.handorgel__content{display:none;overflow:hidden;height:0;transition:height .1s ease .1s}.handorgel .accordion.open,.handorgel__content--open{display:block;transition:height .2s ease}.handorgel .accordion.active,.handorgel__content--focus{overflow:visible}
