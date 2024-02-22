@@ -1,18 +1,75 @@
-.handorgel .accordion,
+.content-accordion {
+    border-bottom: 1px solid #eee;
+}
+
+.handorgel__header {
+    display: block;
+    margin: 0;
+}
+
+.handorgel__header__button {
+    display: block;
+    width: 100%;
+    padding: 20px 24px;
+    margin: 0;
+    border: none;
+    border-top: 1px solid #eee;
+    background-color: #fff;
+    border-radius: 0;
+    color: inherit;
+    cursor: pointer;
+    font-size: inherit;
+    text-align: left;
+    transition: background-color 0.2s ease;
+    user-select: none;
+}
+
+.handorgel__header__button::-moz-focus-inner {
+    border: 0;
+}
+
 .handorgel__content {
     display: none;
     overflow: hidden;
     height: 0;
-    transition: height .1s ease .1s;
+    border-top: 1px solid #eee;
+    background-color: #f6f6f6;
+    transition: height 0.1s ease 0.1s;
 }
 
-.handorgel .accordion.open,
 .handorgel__content--open {
+    display: block;
+    transition: height 0.2s ease;
+}
+
+.handorgel__content--opened {
+    overflow: visible;
+}
+
+.handorgel__content__inner {
+    padding: 20px 24px;
+    opacity: 0;
+    transition: opacity 0.1s ease;
+}
+
+.handorgel__content--opened .handorgel__content__inner {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* Legacy classes */
+.handorgel .accordion {
+    display: none;
+    overflow: hidden;
+    height: 0;
+    transition: height .2s ease;
+}
+
+.handorgel .accordion.open {
     display: block;
     transition: height .2s ease;
 }
 
-.handorgel .accordion.active,
-.handorgel__content--focus {
+.handorgel .accordion.active {
     overflow: visible;
 }
