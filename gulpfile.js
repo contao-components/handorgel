@@ -1,26 +1,15 @@
-'use strict';
+const { src, dest } = require('gulp');
+const csso = require('gulp-csso');
+const rename = require('gulp-rename');
 
-var gulp = require('gulp'),
-    csso = require('gulp-csso'),
-    ignore = require('gulp-ignore'),
-    rename = require('gulp-rename'),
-    pump = require('pump');
+function css() {
+    return src(['css/*.css', '!css/*.min.css'])
+        .pipe(csso({
+            comments: false,
+            restructure: false
+        }))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(dest('css'));
+}
 
-gulp.task('minify-css', function (cb) {
-    pump([
-            gulp.src('css/*.css'),
-            ignore.exclude('*.min.css'),
-            csso({
-                comments: false,
-                restructure: false
-            }),
-            rename({
-                suffix: '.min'
-            }),
-            gulp.dest('css')
-        ],
-        cb
-    );
-});
-
-gulp.task('default', gulp.parallel('minify-css'));
+exports.default = css;
